@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Carson</title>
+    <script ﻿language="javascript">
+
+
+         function callAndroid(){
+            // 由于对象映射，所以调用test对象等于调用Android映射的对象
+            ﻿window.test.hello("js调用了android中的hello方法");
+         }
+         function callAndroid2(){
+             alert("来自callAndroid2信息：");
+            // 由于对象映射，所以调用test对象等于调用Android映射的对象
+            ﻿window.test.prodectAction("{\"id\":\"16\",\"b\":1}");
+            //﻿window.test.prodectAction("{"id":"16"}");
+         }
+
+
+
+
+
+
+
+         function huiqucanshu(a,b){
+                alert("android 调用 js");
+                // console.log("android 调用 js");
+                //confirm("android 调用 js")
+         }
+
+        //在android代码中调用此方法
+         function showInfoFromJava(msg){
+            alert("来自客户端的信息："+msg);
+            console.log("来自客户端的信息");
+            confirm("来自客户端的信息")
+         }
+
+
+
+         function avc(){
+            ﻿document.getElementById("droid").text="cabbage.png";
+             alert("来自客户端的信息：");
+             console.log("来自客户端的信息");
+             confirm("来自客户端的信息")
+         }
+
+
+      </script>
+</head>
+<body>
+<!--//点击按钮则调用callAndroid函数-->
+  <button type="button" value="按钮1" name="按钮" id="button1" onclick="callAndroid()"></button></br>
+
+
+  <button type="button" value="按钮2" name="按钮2" id="button2" onclick="callAndroid2()"></button>
+
+  <div id="droid">avb</div>
+</body>
+</html>
