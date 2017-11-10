@@ -13,8 +13,6 @@ import android.widget.EditText;
 
 import org.json.JSONObject;
 
-import javax.security.auth.login.LoginException;
-
 public class JavaJsActivity extends Activity {
 
     private static final String TAG = "tag";
@@ -36,7 +34,7 @@ public class JavaJsActivity extends Activity {
         // 通过addJavascriptInterface()将Java对象映射到JS对象
         //参数1：Javascript对象名
         //参数2：Java对象名
-        mWebView.addJavascriptInterface(new AndroidtoJs(), "test");//AndroidtoJS类对象映射到js的test对象
+        mWebView.addJavascriptInterface(new AndroidtoJs(), "androidAndjs");//AndroidtoJS类对象映射到js的test对象
        //添加客户端支持
         mWebView.setWebChromeClient(new WebChromeClient());
         // 先载入JS代码
@@ -116,6 +114,15 @@ public class JavaJsActivity extends Activity {
 
 
             }
+
+        }
+
+        //跳转主页
+        @JavascriptInterface
+        public void popToRoot() {
+
+            Log.e("web","popToRoot");
+
 
         }
 

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:gravity="center_vertical"
+        >
+        <LinearLayout
+            android:id="@+id/pass_cancel"
+            android:layout_width="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <ImageView
+
+                android:layout_marginLeft="12dp"
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_launcher"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/tv_alert_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="在线支付"
+                android:textSize="16sp"
+
+                android:textColor="@color/back"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:textColor="@color/red"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/all_view_line"/>
+
+    <LinearLayout
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        >
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="交易密码"
+            android:gravity="center_vertical"
+            android:textColor="@color/back"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+        <EditText
+
+            android:layout_width="160dp"
+            android:layout_marginLeft="12dp"
+
+            android:id="@+id/control_input_pass"
+            android:hint="请输入交易密码"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:background="@null"
+            android:textColorHint="@color/gray2_99"
+            android:textSize="13sp"
+            android:layout_height="37dp"
+            tools:ignore="HardcodedText" />
+
+
+        <TextView
+            android:visibility="gone"
+            android:textSize="14sp"
+            android:background="@color/all_bg"
+            android:textColor="@color/yellow_light"
+            android:gravity="center"
+            android:layout_marginRight="22dp"
+            android:text="179"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            tools:ignore="HardcodedText" />
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="14dp"
+        android:id="@+id/pass_by"
+        android:layout_marginLeft="27dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/btn_control_pay_pass"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/yellow_light"
+        tools:ignore="HardcodedText" />
+</LinearLayout>

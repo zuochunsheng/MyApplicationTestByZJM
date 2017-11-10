@@ -3,4 +3,28 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <color name="white">#ffffffff</color>
+    <color name="bg_yellow">#d59a3d</color>
+    <color name="yellow_light">#ffc746</color>
+    <color name="all_bg">#f5f5f5</color>
+    <!--透明-->
+    <color name="transparent">#00000000</color>
+    <!--半透明-->
+    <color name="transparent_half">#ae000000</color>
+    <color name="back">#000000</color>
+
+    <color name="all_view_line">#dadada</color>
+    <!--姨妈红-->
+    <color name="red">#f74d3c</color>
+
+
+    <color name="gray_21">#212121</color>
+    <color name="gray_1">#010101</color>
+    <color name="gray1_33">#333333</color>
+    <color name="gray2_99">#999999</color>
+    <color name="gray_66">#666666</color>
+
+
 </resources>

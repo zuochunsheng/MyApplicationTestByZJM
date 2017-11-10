@@ -8,13 +8,17 @@
 
          function callAndroid(){
             // 由于对象映射，所以调用test对象等于调用Android映射的对象
-            ﻿window.test.hello("js调用了android中的hello方法");
+            ﻿window.androidAndjs.hello("js调用了android中的hello方法");
          }
          function callAndroid2(){
              alert("来自callAndroid2信息：");
             // 由于对象映射，所以调用test对象等于调用Android映射的对象
-            ﻿window.test.prodectAction("{\"id\":\"16\",\"b\":1}");
-            //﻿window.test.prodectAction("{"id":"16"}");
+            //﻿window.androidAndjs.prodectAction("{\"id\":\"16\",\"b\":1}");
+
+         ﻿  window.androidAndjs.popToRoot();
+
+
+
          }
 
 
