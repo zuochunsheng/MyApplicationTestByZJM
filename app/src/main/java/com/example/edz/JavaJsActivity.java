@@ -35,14 +35,11 @@ public class JavaJsActivity extends Activity {
         //参数1：Javascript对象名
         //参数2：Java对象名
         mWebView.addJavascriptInterface(new AndroidtoJs(), "androidAndjs");//AndroidtoJS类对象映射到js的test对象
-       //添加客户端支持
+        //添加客户端支持
         mWebView.setWebChromeClient(new WebChromeClient());
         // 先载入JS代码
         // 格式规定为:file:///android_asset/文件名.html
         mWebView.loadUrl("file:///android_asset/javascript.html");
-
-
-
 
 
     }
@@ -52,15 +49,15 @@ public class JavaJsActivity extends Activity {
         final String msg = ((EditText) findViewById(R.id.input_et)).getText().toString();
         Log.e(TAG, "sendInfoToJs: ");
 
-       new Handler().post(new Runnable() {
+        new Handler().post(new Runnable() {
             public void run() {
                 //android 调 js
-               // mWebView.loadUrl("javascript:avc()");
+                // mWebView.loadUrl("javascript:avc()");
                 //Log.e("tag", "run: -------安卓 调用js");
 
                 final boolean isLogin = false;
                 final String token = "1233";
-                mWebView.loadUrl("javascript:huiqucanshu('"+isLogin+"','"+token+"')");
+                mWebView.loadUrl("javascript:huiqucanshu('" + isLogin + "','" + token + "')");
             }
         });
 
@@ -74,8 +71,31 @@ public class JavaJsActivity extends Activity {
         // 被JS调用的方法必须加入@JavascriptInterface注解
         @JavascriptInterface
         public void hello(String msg) {
-            Log.e("tag","JS调用了Android的hello方法");
+            Log.e("tag", "JS调用了Android的hello方法");
         }
+
+        @JavascriptInterface
+        public String hello() {
+            Log.e("tag", "JS调用了Android的hello方法 有返回值");
+            return "Android的hello方法 有返回值";
+        }
+
+        @JavascriptInterface
+        public String hello2() {
+            Log.e("tag", "JS调用了Android的hello方法 有返回值  2");
+
+          //  String data = "{\"token\":\"token\",\"invitecode\":\"invitecode\"}";
+
+            String token = "token值";
+            String invitecode = "invitecode值";
+            String data = "{\"token\":\""+token+"\",\"invitecode\":\""+ invitecode+"\"}";
+
+            Log.e("tag", data);
+            return data;
+        }
+
+
+        //有 问题
        /* @JavascriptInterface
         public void prodectAction(JSONObject jsonObject) {
 
@@ -96,21 +116,21 @@ public class JavaJsActivity extends Activity {
         }*/
 
         @JavascriptInterface
-        public void prodectAction(String  info) {
+        public void prodectAction(String info) {
 
-            Log.e("tag","web");
-            Log.e("tag",info);
+            Log.e("tag", "web");
+            Log.e("tag", info);
 
-            try{
+            try {
                 JSONObject jsonObject = new JSONObject(info);
 
-                String   productId = jsonObject.getString("id");
-                int   b = jsonObject.getInt("b");
-                Log.e("tag",productId);
-                Log.e("tag",b+"");
+                String productId = jsonObject.getString("id");
+                int b = jsonObject.getInt("b");
+                Log.e("tag", productId);
+                Log.e("tag", b + "");
 
                 //getProductata();
-            }catch (Exception e){
+            } catch (Exception e) {
 
 
             }
@@ -121,7 +141,7 @@ public class JavaJsActivity extends Activity {
         @JavascriptInterface
         public void popToRoot() {
 
-            Log.e("web","popToRoot");
+            Log.e("web", "popToRoot");
 
 
         }

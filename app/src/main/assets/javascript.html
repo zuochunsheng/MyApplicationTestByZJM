@@ -8,7 +8,25 @@
 
          function callAndroid(){
             // 由于对象映射，所以调用test对象等于调用Android映射的对象
-            ﻿window.androidAndjs.hello("js调用了android中的hello方法");
+
+            //无返回值
+            //﻿window.androidAndjs.hello("js调用了android中的hello方法");
+
+           // js调用了android中的hello方法  有返回值
+           // var fromAndroid = window.androidAndjs.hello();
+           // alert(fromAndroid);
+
+            // js调用了android中的hello方法  有返回值 2个
+            var str = window.androidAndjs.hello2(); //String
+
+            //{"token":"token","invitecode":"invitecode"}
+            alert(str);
+
+            var obj = JSON.parse(str); //由JSON字符串转换为JSON对象
+            alert(obj.token);
+            alert(obj.invitecode);
+
+
          }
          function callAndroid2(){
              alert("来自callAndroid2信息：");
@@ -54,10 +72,10 @@
 </head>
 <body>
 <!--//点击按钮则调用callAndroid函数-->
-  <button type="button" value="按钮1" name="按钮" id="button1" onclick="callAndroid()"></button></br>
+  <button type="button" value="按钮1" name="按钮" id="button1" onclick="callAndroid()"></button></br></br></br>
 
 
-  <button type="button" value="按钮2" name="按钮2" id="button2" onclick="callAndroid2()"></button>
+  <button type="button" value="按钮2" name="按钮2" id="button2" onclick="callAndroid2()"></button></br>
 
   <div id="droid">avb</div>
 </body>
