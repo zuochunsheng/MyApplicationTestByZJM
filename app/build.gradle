@@ -4,6 +4,16 @@ apply plugin: 'com.neenbedankt.android-apt'
 
 apply plugin: 'AcesoHost'
 
+
+repositories {
+    flatDir {
+        dir "libs"
+    }
+    mavenCentral()
+}
+
+
+
 Aceso {
     //instrumentDebug = false
     logLevel = 3
@@ -88,6 +98,12 @@ dependencies {
     //   retrofit2
     //  RxJava
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    //noinspection GradleCompatible
+    compile 'com.android.support:design:26.0.0-alpha1'
+
+
     compile 'com.diogobernardino:williamchart:2.5.0'
     compile 'com.mogujie.aceso:aceso-android-lib:0.0.1'
     compile 'com.squareup.okhttp3:okhttp:3.3.1'
