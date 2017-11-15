@@ -5,7 +5,7 @@
     <title>Carson</title>
     <script ﻿language="javascript">
 
-
+        // js  调用 Android
          function callAndroid(){
             // 由于对象映射，所以调用test对象等于调用Android映射的对象
 
@@ -30,7 +30,7 @@
          }
          function callAndroid2(){
              alert("来自callAndroid2信息：");
-            // 由于对象映射，所以调用test对象等于调用Android映射的对象
+            // 由于对象映射，所以调用test对象等于调用Android映射的对象  传递字符串
             //﻿window.androidAndjs.prodectAction("{\"id\":\"16\",\"b\":1}");
 
          ﻿  window.androidAndjs.popToRoot();
@@ -39,11 +39,22 @@
 
          }
 
+        function callAndroid3(){
+
+         ﻿ /*约定的url协议为：js://webview?arg1=111&arg2=222*/
+            document.location = "js://webview?arg1=111&arg2=222";
+
+         }
+        function clickprompt(){
+            // 调用prompt（）
+            var result = prompt("js://webview?arg1=111&arg2=222");
+            alert("demo " + result);
+        }
 
 
 
 
-
+        // Android  调用  js
 
          function huiqucanshu(a,b){
                 alert("android 调用 js");
@@ -61,22 +72,42 @@
 
 
          function avc(){
-            ﻿document.getElementById("droid").text="cabbage.png";
+            ﻿document.getElementById("text").text="cabbage";
              alert("来自客户端的信息：");
-             console.log("来自客户端的信息");
-             confirm("来自客户端的信息")
+             //console.log("来自客户端的信息");
+             //confirm("来自客户端的信息")
+         }
+
+            // 有返回值 返回
+          function avcCalljs(){
+
+             alert("来自客户端的信息：");
+             return "from js消息";
          }
 
 
-      </script>
+
+    </script>
 </head>
 <body>
 <!--//点击按钮则调用callAndroid函数-->
-  <button type="button" value="按钮1" name="按钮" id="button1" onclick="callAndroid()"></button></br></br></br>
+    <button type="button" value="按钮1" name="按钮1" id="button1" onclick="callAndroid()">按钮1</button>
+    </br></br>
 
 
-  <button type="button" value="按钮2" name="按钮2" id="button2" onclick="callAndroid2()"></button></br>
+    <button type="button" value="按钮2" name="按钮2" id="button2" onclick="callAndroid2()">按钮2</button>
+    </br></br>
 
-  <div id="droid">avb</div>
+    <button type="button" value="按钮3" name="按钮3" id="button3" onclick="callAndroid3()">按钮3</button>
+    </br></br>
+
+    <button type="button" value="按钮4" name="按钮4" id="button4" onclick="clickprompt()">点击调用Android代码</button>
+    </br></br>
+
+
+    <div id="droid">avb</div>
+    </br></br>
+
+    <span id="text">text</span></br>
 </body>
 </html>

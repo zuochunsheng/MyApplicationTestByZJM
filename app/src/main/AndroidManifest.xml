@@ -73,11 +73,11 @@
         <!-- 与js  交互 -->
         <activity android:name=".JavaJsActivity">
 
-           <!-- <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
         </activity>
         <!-- 电源关开 -->
         <activity android:name=".activity.PowerActivity">
@@ -95,11 +95,11 @@
 
         <!-- 最新 热修复 -->
         <activity android:name=".activity.FixedActivity">
-            <intent-filter>
+           <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
         <activity android:name=".activity.DownLoadActivity">
             <!--<intent-filter>
