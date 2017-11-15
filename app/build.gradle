@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 
 
-apply plugin: 'AcesoHost'
 
 
 repositories {
@@ -13,50 +12,6 @@ repositories {
 }
 
 
-
-Aceso {
-    //instrumentDebug = false
-    logLevel = 3
-    //methodLevelFix为true时，是方法级的fix，也就是只对特定的方法进行修复，需要在修的方法前加@FixMtd的注解。
-    // 否则是对整个类的所有方法进行修复。
-    methodLevelFix = true
-    //下面文件都在Usage第4步提到的aceso文件夹中，各个文件的作用请参考wiki
-    instrumentJar = getInstrumentJar();//'宿主工程生成的instrument.jar的路径'
-    acesoMapping = getAcesoMapping();//'宿主工程生成的aceso-mapping.txt的路径'
-//    allClassesJar = getAllClassesJar()
-
-
-}
-
-def getInstrumentJar() {
-    return project.rootProject.file("../aceso-demo/app/build/intermediates/aceso/instrument/full/${buildTypeStr()}/instrument.jar").absolutePath
-}
-
-def getAcesoMapping() {
-    return project.rootProject.file("../aceso-demo/app/build/intermediates/aceso/aceso-mapping//full/${buildTypeStr()}/aceso-mapping.txt").absolutePath
-}
-
-def getAllClassesJar() {
-    return project.rootProject.file("../aceso-demo/app/build/intermediates/aceso/all-classes/full/${buildTypeStr()}/all-classes.jar").absolutePath
-}
-
-def buildTypeStr() {
-    def buildType = null
-    def defaultBuiltType = "debug"
-    project.gradle.getStartParameter().getTaskRequests().each { taskReq ->
-        taskReq.args.each { arg ->
-
-            if (arg.startsWith("aceso")) {
-                buildType = (arg - "aceso").toLowerCase()
-            }
-            if (arg.toLowerCase().contains("release")) {
-                defaultBuiltType = "release"
-            }
-        }
-    }
-
-    return buildType == null ? defaultBuiltType : buildType
-}
 
 
 android {
@@ -84,12 +39,8 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    //宿主工程生成的all-classes.jar的路径,请参考wiki和aceso-demo-fix工程
-    provided files(getAllClassesJar())
 
     //compile 'com.google.code.gson:gson:2.8.1'
-
-    
 
     //okhttp网络框架工具
     //compile 'com.squareup.picasso:picasso:2.5.2'
@@ -105,15 +56,18 @@ dependencies {
 
 
     compile 'com.diogobernardino:williamchart:2.5.0'
-    compile 'com.mogujie.aceso:aceso-android-lib:0.0.1'
+
+    //compile 'com.mogujie.aceso:aceso-android-lib:0.0.1'
     compile 'com.squareup.okhttp3:okhttp:3.3.1'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.jakewharton:butterknife:8.1.0'
+    apt 'com.jakewharton:butterknife-compiler:8.1.0'
+
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
     compile 'io.reactivex:rxjava:1.1.10'
     compile 'io.reactivex:rxandroid:1.2.1'
     testCompile 'junit:junit:4.12'
-    apt 'com.jakewharton:butterknife-compiler:8.1.0'
+
 }
