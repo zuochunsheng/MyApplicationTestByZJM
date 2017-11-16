@@ -46,12 +46,28 @@
     <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
 
     <application
+        android:name=".application.MainApplication"
         android:allowBackup="true"
+
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+
+        <!--热跟新-->
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="24696147-1" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="23af2f288e75c215587d2c0b432be519" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDrR5pZi+lN3nri96ZrGLifvilLWY/WJHIoKZtF4owDIDLNfXUlBQNtx0rSB27MmvFkh9Tn3RLlSCqVbGASKPcPFrzkhjU4zKcz3gZ3M7Zbg0VYHDmKhm3l2DAFnHDX5wxIzXzOYyzUmg/CbKpWBBbWqqnup8ZrPYuOKaYeiDKK1qnV0Ef4EGxP1V6GhFmhrmNxv1MS6pE4I4l8np0ocgV8sBCwNTH3rS+y3rHS5mLRSQunWgtQVuetRQcDns2IYWv1cUcV38T1hKE07yFdzcXomzG/p457khkQIaIq9NZ4lS2RblRaFZd5/5WFSdNYF4rmX/CdDDXXUPxizgFjZtgXAgMBAAECggEAfTo1Oygu21VpTtjFaQdVbSDH1eUrm6z2Xc4XaRD1uMwwfhMigLu0YX/LoRJ3tMtbZEiv12Fhp0vL7pAqakAHj65oh7GvLjYvYHnyMwwBKaArDoSnU8XNRKLWnIXxwdimPzGwFiHPQLFnZfJ0jyfKCCP6Ip6GC5pMZzRfyKxxSleF9cUkWHnoeLg5npm4sU4nwKAYW23t+kBC9Mds0sZTdeyl/oqElxvnSO+qXnLci0JrQlVwgiwho3+KS1hPbh64sSCPAP7X1WTkMGuVkeB+4D2c8h6H196JmM8FoF/42r3/1RS8rxfcJhkICihHiWXOCwvT2yxW3QFDHJh2cRBykQKBgQD3vIt0RvLmjoJrugtGCrx9H8h4JJf/qBmCQO5mLMQ5ot0IdbHUtsV7jxx+ewqHvYZnRYffbmx6FyFKLcYV0VT3eq0hojvRSNFgnO+v4Be7Xlc2OE+TKrTPDOFMCTApc4s+lgYaGfcQpVGo5jGOgSjE4i26pgf4RE+dekGkIt+TtQKBgQDzILAX44/bizcwkpZokWt0ogT/ZQ0dy6UfV3EWXfRpI5wyDWOXuA7VHXgrZsrDYstqcTpSG2PrdBtyMOAcFJc+p/6qsA5zIxpPXWtbQfxQbn23oUTbQY1qQCGgc4rsYS5vAsV2239Ge4QmSGdiyQIQh9g2h66bxKVHnYgoonu0GwKBgGDebsEmxO/2JXUuKB5ZMF7UwLSJyo2DE4ZlEVMOiiPnVPpr2v9MAGhSC1hBkFqHdziGbZymNvB+ftvcjioV0l16sJwILc+l44kdlHN28pCnUP64ghUPi+eyJ55tsVFkBryQOQ6XvI3bttSOPi50vpZNwofLSC6Bt4fiOCyQHlBJAoGBAI4ZbNKJjmsi0v7wrjgvxj5E8+bRiPkBLWFEGjSYdWF+DqyyZqMmUIT+1F2Jlrjb5UgxJYUXvS7AjcoQBuxinINibNYWUFu7CIWadETCLFZWPeQ1vajoh16yXPUKkwfVRO5dEEyHvbvUNUiqyMJT+YDv5M76PnOMW42f5RTa4rJBAoGBAMuUePfGj48haCuqn9i2qdy8o2zISSJEvCW5/m69C2n4k1Zw8peFToynnRMoqik2mNbS4Lfxw2FUAtEKaVW9+s/42s8FFMLn3dwr8Jiqw+olK94klXaMBGabioNAn6+1wqhd1pfqTEXFdvswZEJjeZBd3X50Jc3ApfPZpjvxwr7l" />
+
+
         <activity android:name=".MainActivity">
 
             <!--
@@ -72,14 +88,6 @@
         </activity>
         <!-- 电源关开 -->
         <activity android:name=".activity.PowerActivity">
-
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
         </activity>
         <!-- 图表 -->
         <activity android:name=".activity.ChartActivity" />
@@ -87,30 +95,15 @@
         <!-- 最新 热修复 -->
         <activity android:name=".activity.FixedActivity">
 
-            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
         </activity>
         <activity android:name=".activity.DownLoadActivity">
-
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
         </activity>
         <activity android:name=".activity.ShareActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

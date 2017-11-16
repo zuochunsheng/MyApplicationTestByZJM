@@ -137,7 +137,7 @@ public class ShareActivity extends Activity implements View.OnClickListener{
     }
 
 
-    //进入  取消的动画
+    //进入动画
     private void moveInAnim(boolean isHideCode) {
         ObjectAnimator friendAnimatorX = ObjectAnimator.ofFloat(tvFriend, "TranslationX", 0);
         ObjectAnimator friendAnimatorY = ObjectAnimator.ofFloat(tvFriend, "TranslationY", 0);
@@ -197,6 +197,8 @@ public class ShareActivity extends Activity implements View.OnClickListener{
     }
 
 
+
+    // 退出的动画
     private void moveOutAnim(boolean isFinishActivity, boolean isShowCode) {
         ObjectAnimator friendAnimatorX = ObjectAnimator.ofFloat(tvFriend, "TranslationX", -screenWidth / 2);
         ObjectAnimator friendAnimatorY = ObjectAnimator.ofFloat(tvFriend, "TranslationY", -tvFriend.getHeight() * 2);
