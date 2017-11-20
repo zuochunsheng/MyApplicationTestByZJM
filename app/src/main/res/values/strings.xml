@@ -25,4 +25,7 @@
     <string name="layout_aboutus_copyright">Copyright © 2009 - 2016 Aliyun.com</string>
     <!--帮助中心页面-->
     <string name="layout_helpus_content">Q : 什么是用户体验Demo？\nA : 用户体验Demo就是阿里云平台为您自动创建的、用来体验移动热修复的一个小Demo。\n\nQ : 如何联系我们？\nA : App Demo相关问题，请搜索钉钉群号：11711603</string>
+
+
+    <string name="net_error_tip">当前网络不可用，请检查您的网络设置</string>
 </resources>
