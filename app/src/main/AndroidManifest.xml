@@ -141,7 +141,7 @@
         <activity android:name=".base.BaseActivity">
 
         </activity>
-        <activity android:name=".base.ShadowActivity">
+        <activity android:name=".permission.ShadowActivity">
 
         </activity>
     </application>

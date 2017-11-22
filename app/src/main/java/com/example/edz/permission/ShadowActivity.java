@@ -1,4 +1,4 @@
-package com.example.edz.base;
+package com.example.edz.permission;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -6,9 +6,8 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 
-import com.example.edz.permission.PermissionUtil;
-
 /**
+ *
  * authr : edz on 2017/11/22  下午5:09
  * describe ：
  */

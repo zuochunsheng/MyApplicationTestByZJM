@@ -1,7 +1,6 @@
 package com.example.edz.permission;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -9,7 +8,7 @@ import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 
-import com.example.edz.base.ShadowActivity;
+import com.example.edz.util.LogUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +34,7 @@ public class PermissionUtil  {
 
     PermissionUtil(Context ctx) {
         mCtx = ctx;
+        LogUtil.e("permission");
     }
 
 
@@ -45,14 +45,11 @@ public class PermissionUtil  {
 
     @TargetApi(Build.VERSION_CODES.M)
     public  void requestRunTimePermission(String[] permissions, IPermission listener) {
-        Activity topActivity = ActivityCollector.getTopActivity();
-        if (topActivity == null) {
-            return;
-        }
+
         mListener = listener;
         List<String> permissionList = new ArrayList<>();
         for (String permission : permissions) {
-            if (ContextCompat.checkSelfPermission(topActivity, permission) != PackageManager.PERMISSION_GRANTED) {
+            if (ContextCompat.checkSelfPermission(mCtx, permission) != PackageManager.PERMISSION_GRANTED) {
                 permissionList.add(permission);
             }
         }
@@ -66,6 +63,7 @@ public class PermissionUtil  {
         }
     }
 
+    //跳转
    private void startShadowActivity(String[] permissions) {
 
         Intent intent = new Intent(mCtx, ShadowActivity.class);
@@ -76,7 +74,9 @@ public class PermissionUtil  {
 
 
 
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    //回调 ---十分巧妙
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
 
         switch (requestCode) {
             case REQUEST_CODE:

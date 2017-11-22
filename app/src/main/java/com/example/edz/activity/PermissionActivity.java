@@ -45,17 +45,21 @@ public class PermissionActivity extends BaseActivity {
                     }
                 });*/
 
+       //工具类 方式
         PermissionUtil.getInstance(this).requestRunTimePermission(new String[]{Manifest.permission.CALL_PHONE,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE},
                 new IPermission() {
                     @Override
                     public void onGranted() {
-                        Toast.makeText(PermissionActivity.this,"申请同意",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PermissionActivity.this,"所有权限都同意了",Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
                     public void onDenied(List<String> deniedPermission) {
-                        Toast.makeText(PermissionActivity.this,"申请拒绝",Toast.LENGTH_SHORT).show();
+                        for (String permission :deniedPermission) {
+                            Toast.makeText(PermissionActivity.this,"被拒绝权限："  + permission,Toast.LENGTH_SHORT).show();
+                        }
+
                     }
                 }
         );
