@@ -105,13 +105,32 @@
         </activity>
         <activity android:name=".activity.ShareActivity" />
         <activity android:name=".activity.ProgressActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".activity.NetErrorActivity">
             <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>-->
         </activity>
-        <activity android:name=".activity.NetErrorActivity">
+
+        <receiver android:name=".broadcast.NetWorkReceiver">
+            <intent-filter>
+
+                <!-- 接收网络变化的广播 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.PermissionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -119,12 +138,12 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".broadcast.NetWorkReceiver" >
-            <intent-filter>
-                <!-- 接收网络变化的广播 -->
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-            </intent-filter>
-        </receiver>
+        <activity android:name=".base.BaseActivity">
+
+        </activity>
+        <activity android:name=".base.ShadowActivity">
+
+        </activity>
     </application>
 
 </manifest>
