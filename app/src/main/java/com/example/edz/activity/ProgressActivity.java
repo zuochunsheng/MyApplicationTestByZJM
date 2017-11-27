@@ -9,6 +9,9 @@ import android.widget.TextView;
 import com.example.edz.R;
 import com.example.edz.view.DownLoadProgressbar;
 
+/*
+ * 进度条
+ */
 public class ProgressActivity extends Activity {
 
 

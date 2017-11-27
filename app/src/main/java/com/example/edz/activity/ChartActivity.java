@@ -7,6 +7,9 @@ import com.db.chart.model.LineSet;
 import com.db.chart.view.LineChartView;
 import com.example.edz.R;
 
+/*
+ * ？
+ */
 public class ChartActivity extends Activity {
 
     //线性图表控件

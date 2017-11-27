@@ -38,7 +38,7 @@
     <uses-permission android:name="android.permission.READ_SMS" />
 
     <permission
-        android:name="com.goldcat.permission.SENDMAIL"
+        android:name="com.example.edz.permission.SENDMAIL"
         android:protectionLevel="normal" />
 
     <!-- Notification 显示 权限 -->
@@ -115,11 +115,14 @@
             -->
         </activity>
         <activity android:name=".activity.NetErrorActivity">
-            <!--<intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
 
         <receiver android:name=".broadcast.NetWorkReceiver">
@@ -130,19 +133,26 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".activity.PermissionActivity">
+        <activity android:name=".activity.PermissionActivity"></activity>
+        <activity android:name=".base.BaseActivity" />
+        <activity
+            android:name=".permission.ShadowActivity"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:label="@string/title_activity_settings">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity android:name=".activity.RefreshActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <activity android:name=".base.BaseActivity">
-
-        </activity>
-        <activity android:name=".permission.ShadowActivity">
-
         </activity>
     </application>
 

@@ -25,7 +25,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.edz.R;
-
+/*
+ * 分享动画
+ */
 public class ShareActivity extends Activity implements View.OnClickListener{
 
 

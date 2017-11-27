@@ -15,7 +15,9 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
+/*
+ * 权限 封装
+ */
 public class PermissionActivity extends BaseActivity {
 
     @BindView(R.id.tv)

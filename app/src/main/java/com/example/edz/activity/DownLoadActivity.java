@@ -29,6 +29,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/*
+ * 下载
+ */
 public class DownLoadActivity extends FragmentActivity {
 
     @BindView(R.id.file_name)
