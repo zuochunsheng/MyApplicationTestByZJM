@@ -37,7 +37,9 @@ import java.util.Random;
  * 16/10/14      Diamond_Lin            1.0                    1.0
  * Why & What is modified:
  *
- * @author edz
+ *
+ *
+ * @author edz  刷新的 头view 1
  */
 public class ShopView extends RelativeLayout implements RefreshHeader {
     private Context mContext;
@@ -203,7 +205,8 @@ public class ShopView extends RelativeLayout implements RefreshHeader {
     }
 
     @Override
-    public void onPositionChange(float currentPos, float lastPos, float refreshPos, boolean isTouch, RefreshLayout.State state) {
+    public void onPositionChange(float currentPos, float lastPos, float refreshPos, boolean isTouch,
+                                 RefreshLayout.State state) {
         mBezierLine.setControlY(currentPos);
 
         if (currentPos > mHeight) {

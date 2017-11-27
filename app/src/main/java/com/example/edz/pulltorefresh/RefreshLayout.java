@@ -1,7 +1,6 @@
 package com.example.edz.pulltorefresh;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.support.v4.view.MotionEventCompat;
 import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
@@ -11,15 +10,13 @@ import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
-import android.widget.ImageView;
 import android.widget.Scroller;
 
-import com.example.edz.R;
 import com.example.edz.util.Utils;
 
 /**
  * Created by AItsuki on 2016/6/13.
- * -
+ * -  刷新  1
  */
 public class RefreshLayout extends ViewGroup {
 
@@ -82,6 +79,7 @@ public class RefreshLayout extends ViewGroup {
         this(context, null);
     }
 
+    // 添加默认的头部
     public RefreshLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
 
@@ -89,10 +87,13 @@ public class RefreshLayout extends ViewGroup {
         autoScroll = new AutoScroll();
 
         // 添加默认的头部，先简单的用一个ImageView代替头部
-        ImageView imageView = new ImageView(context);
+        /*ImageView imageView = new ImageView(context);
         imageView.setImageResource(R.drawable.one_piece);
         imageView.setBackgroundColor(Color.BLACK);
-        setRefreshHeader(imageView);
+        setRefreshHeader(imageView);*/
+
+        ViewHeader viewHeader = new ViewHeader(context);
+        setRefreshHeader(viewHeader);
     }
 
     /**

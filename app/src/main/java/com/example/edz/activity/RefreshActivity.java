@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 import com.example.edz.R;
 import com.example.edz.pulltorefresh.RefreshLayout;
-import com.example.edz.pulltorefresh.ShopView;
 
 /**
  * @author edz
@@ -43,9 +42,12 @@ public class RefreshActivity extends Activity {
                     }, 3000);
                 }
             });
-            ShopView shopView = new ShopView(this);
-            refreshLayout.setRefreshHeader(shopView);
+//            ShopView shopView = new ShopView(this);
+//            refreshLayout.setRefreshHeader(shopView);
            // refreshLayout.autoRefresh();
+
+           /* ViewHeader viewHeader = new ViewHeader(this);
+            refreshLayout.setRefreshHeader(viewHeader);*/
         }
 
     }
