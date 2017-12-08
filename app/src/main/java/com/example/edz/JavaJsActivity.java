@@ -21,6 +21,7 @@ import com.example.edz.util.LogUtil;
 
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 
@@ -45,6 +46,7 @@ public class JavaJsActivity extends Activity {
 
     private static final String TAG = "tag";
     private WebView mWebView;
+   // String h5 = "http://www.huijindai123.com/hjdh5/help_center/index.html";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +70,7 @@ public class JavaJsActivity extends Activity {
         // 先载入JS代码
         // 格式规定为:file:///android_asset/文件名.html
         mWebView.loadUrl("file:///android_asset/javascript.html");
+       // mWebView.loadUrl(h5);
 
 
         // 复写WebViewClient类的shouldOverrideUrlLoading方法
@@ -345,4 +348,17 @@ public class JavaJsActivity extends Activity {
 
 
     }*/
+
+
+
+    // 快捷键 练习
+    void foo(String s){
+           //s.isEmpty().i
+
+    }
+    void foo(ArrayList<String> list){
+        //list.f
+
+    }
+
 }
