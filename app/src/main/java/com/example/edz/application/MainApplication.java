@@ -2,6 +2,7 @@ package com.example.edz.application;
 
 import android.app.Application;
 
+import com.example.edz.sp.SharedPreferencesUtil;
 import com.taobao.sophix.SophixManager;
 import com.taobao.sophix.listener.PatchLoadStatusListener;
 
@@ -21,6 +22,9 @@ public class MainApplication extends Application {
     public void onCreate() {
         super.onCreate();
         initHotfix();
+
+        //初始化
+        SharedPreferencesUtil.getInstance(this, "Test");
     }
 
     private void initHotfix() {

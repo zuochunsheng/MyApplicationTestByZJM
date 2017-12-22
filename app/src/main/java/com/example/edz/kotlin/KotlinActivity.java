@@ -1,6 +1,7 @@
 package com.example.edz.kotlin;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.edz.JavaJsActivity;
 import com.example.edz.R;
 import com.example.edz.annotation.OnClick;
 import com.example.edz.annotation.ViewBinder;
@@ -18,8 +20,10 @@ import com.example.edz.util.OnClickFastListener;
 
 /**
  * @author edz
- *         <p>
+ *
  *         自定义ButterKnife
+ *
+ *
  */
 public class KotlinActivity extends Activity {
 
@@ -48,7 +52,7 @@ public class KotlinActivity extends Activity {
         ViewBinderParser.inject(KotlinActivity.this);
 
 
-        //快速点击
+        //快速点击  第一次执行有延迟
         button1.setOnClickListener(new OnClickFastListener() {
             @Override
             public void onFastClick(View v) {
@@ -75,6 +79,10 @@ public class KotlinActivity extends Activity {
             public void onNoCorrentClick(View v) {
                 Toast.makeText(KotlinActivity.this, "判断未通过,无法执行后续操作...",
                         Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(KotlinActivity.this, JavaJsActivity.class);
+                startActivity(intent);
+
 
             }
         });

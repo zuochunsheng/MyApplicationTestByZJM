@@ -45,16 +45,16 @@
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
     <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
 
+    <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
     <application
         android:name=".application.MainApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/app_log"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- 热跟新 start-->
+        <!-- 热跟新 start -->
         <meta-data
             android:name="com.taobao.android.hotfix.IDSECRET"
             android:value="24696147-1" />
@@ -79,15 +79,18 @@
         </activity>
         <!-- 与js  交互 -->
         <activity android:name=".JavaJsActivity">
-            <!--<intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
-        <!-- 电源关开 -->
+        <!-- 电源关开 生命周期 -->
         <activity android:name=".activity.PowerActivity" />
-        <!-- 图表 ？？？-->
+        <!-- 图表 ？？？ -->
         <activity android:name=".activity.ChartActivity" />
 
         <!-- 最新 热修复 -->
@@ -135,7 +138,7 @@
         <activity android:name=".activity.PermissionActivity" />
         <activity android:name=".base.BaseActivity" />
 
-        <!--权限-->
+        <!-- 权限 背景 -->
         <activity
             android:name=".permission.ShadowActivity"
             android:theme="@android:style/Theme.Translucent" />
@@ -151,8 +154,22 @@
             </intent-filter>
             -->
         </activity>
-        <activity android:name=".activity.RefreshActivity"></activity>
-        <activity android:name=".kotlin.KotlinActivity">
+        <activity android:name=".activity.RefreshActivity" />
+
+        <!-- 点击事件 -->
+        <activity
+            android:name=".kotlin.KotlinActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Wallpaper.NoTitleBar">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+
+        <activity android:name=".activity.SpActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

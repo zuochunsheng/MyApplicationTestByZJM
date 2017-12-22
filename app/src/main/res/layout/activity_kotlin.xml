@@ -36,4 +36,13 @@
         android:text="按钮2" />
 
 
+    <com.example.edz.view.BubbleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@mipmap/app_log"
+        android:textColor="@color/white"
+        android:text="ApplicationDemo"
+        />
+
+
 </LinearLayout>
