@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:background="#F2F2F7"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_account"
+        android:text="账号"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_below="@+id/tv_account"
+        android:layout_marginTop="10dp"
+        android:text="提示"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+     <com.example.edz.gesture.GestureLockViewGroup
+            android:id="@+id/id_gestureLockViewGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+
+            android:gravity="center_vertical"
+            zhy:count="3"
+            zhy:tryTimes="5"
+            zhy:color_no_finger_inner_circle="#ff085D58"
+            zhy:color_no_finger_outer_circle="#ff08F0E0"
+            zhy:color_finger_on="#FF1734BF"
+            />
+
+    <!--<com.example.edz.gesture.SudokuView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />-->
+
+</RelativeLayout>
