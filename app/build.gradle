@@ -82,7 +82,6 @@ dependencies {
     //compile 'com.android.support:appcompat-v7:25.3.1'
     //okhttp网络框架工具
     //compile 'com.joanzapata.pdfview:android-pdfview:1.0.4@aar'
-    
 
     //网络下载
     compile files('libs/httpclient-4.2.5.jar')
