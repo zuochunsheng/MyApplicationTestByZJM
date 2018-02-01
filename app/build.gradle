@@ -72,7 +72,6 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.google.code.gson:gson:2.8.1'
     //compile 'com.squareup.picasso:picasso:2.5.2'
     //    小刀工具 ,compile ,apt  版本号 必须一致 否则，unbind 错误
     //   retrofit2
@@ -80,13 +79,20 @@ dependencies {
     //noinspection GradleCompatible
     //compile 'com.mogujie.aceso:aceso-android-lib:0.0.1'
     /*阿里热更新 最新*/
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     //compile 'com.android.support:appcompat-v7:25.3.1'
+    //okhttp网络框架工具
+    //compile 'com.joanzapata.pdfview:android-pdfview:1.0.4@aar'
+    
+
+    //网络下载
+    compile files('libs/httpclient-4.2.5.jar')
+    compile files('libs/httpcore-4.2.4.jar')
+    compile 'com.google.code.gson:gson:2.8.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
     compile 'com.android.support:support-v4:26.+'
     compile 'com.android.support:design:26.0.0-alpha1'
     compile 'com.diogobernardino:williamchart:2.5.0'
-    //okhttp网络框架工具
     compile 'com.squareup.okhttp3:okhttp:3.3.1'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.jakewharton:butterknife:8.1.0'
@@ -97,12 +103,7 @@ dependencies {
     compile 'io.reactivex:rxandroid:1.2.1'
     compile 'com.aliyun.ams:alicloud-android-hotfix:3.1.6'
     compile 'com.android.support:support-vector-drawable:26.+'
+    compile 'com.github.barteksc:android-pdf-viewer:1.4.0'
     testCompile 'junit:junit:4.12'
     apt 'com.jakewharton:butterknife-compiler:8.1.0'
-    //compile 'com.joanzapata.pdfview:android-pdfview:1.0.4@aar'
-    compile 'com.github.barteksc:android-pdf-viewer:1.4.0'
-
-    //网络下载
-    compile files('libs/httpclient-4.2.5.jar')
-    compile files('libs/httpcore-4.2.4.jar')
 }

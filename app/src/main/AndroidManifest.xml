@@ -193,6 +193,22 @@
             -->
         </activity>
         <activity android:name=".activity.ProtocolActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+
+        <service
+            android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".activity.BindActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -201,9 +217,12 @@
         </activity>
 
         <service
-            android:name=".service.MyService"
+            android:name=".service.MyBindService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+        <service
+            android:name=".service.MyIntentService"
+            android:exported="false"></service>
     </application>
 
 </manifest>
