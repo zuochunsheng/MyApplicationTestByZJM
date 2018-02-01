@@ -14,7 +14,7 @@ import java.util.List;
 
 public class ListCompare {
 
-    //判断 两个集合相等
+    //判断 两个集合相等  -->比较字符串
     public static boolean equalList(List list1, List list2) {
        //return (list1.size() == list2.size()) && list1.containsAll(list2);  //不行
 

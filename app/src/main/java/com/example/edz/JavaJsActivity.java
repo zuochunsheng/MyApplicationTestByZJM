@@ -33,9 +33,10 @@ import java.util.Set;
 2. 通过WebView的evaluateJavascript（）-----有回调
 
 对于JS调用Android代码的方法有3种：
-1. 通过WebView的addJavascriptInterface（）进行对象映射
+1. 通过 WebView的addJavascriptInterface（）进行对象映射
 2. 通过 WebViewClient 的shouldOverrideUrlLoading ()方法回调拦截 url
-3. 通过 WebChromeClient 的onJsAlert()、onJsConfirm()、onJsPrompt（）方法回调拦截JS对话框alert()、confirm()、prompt（） 消息
+3. 通过 WebChromeClient 的onJsAlert()、onJsConfirm()、onJsPrompt（）方法
+   回调拦截JS对话框alert()、confirm()、prompt（） 消息
 
 
 http://blog.csdn.net/carson_ho/article/details/64904691

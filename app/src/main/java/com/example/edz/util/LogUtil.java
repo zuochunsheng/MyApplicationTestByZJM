@@ -13,8 +13,8 @@ import com.google.gson.Gson;
 
 public class LogUtil {
 
-    private static final boolean isTest = true;
-    private final static String TAG="tag";
+    private static final boolean isTest = true ;
+    private final static String TAG= "tag" ;//LogUtil.class.getSimpleName();
 
     public static  void e(String string){
         if(isTest){

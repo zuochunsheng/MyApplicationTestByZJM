@@ -12,7 +12,7 @@ import com.example.edz.R;
 
 /**
  * authr : edz on 2017/12/13  下午4:00
- * describe ：
+ * describe ： ?
  */
 
 
@@ -41,8 +41,7 @@ public class BubbleTextView extends TextView {
         // We need extra padding below to prevent the bubble being cut.
         setPadding(PADDING_H, 0, PADDING_H, PADDING_V);
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        mPaint.setColor(getContext().getResources()
-                .getColor(R.color.red));
+        mPaint.setColor(getContext().getResources().getColor(R.color.red));
     }
     @Override
     protected void drawableStateChanged() {

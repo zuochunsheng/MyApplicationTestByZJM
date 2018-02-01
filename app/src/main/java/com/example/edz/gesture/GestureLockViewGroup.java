@@ -27,7 +27,7 @@ import java.util.List;
  * * mCount + 1 ) 注：mMarginBetweenLockView = mGestureLockViewWidth * 0.25 ;
  *
  * @author zhy
- *
+ *  手势锁
  */
 
 public class GestureLockViewGroup extends RelativeLayout {

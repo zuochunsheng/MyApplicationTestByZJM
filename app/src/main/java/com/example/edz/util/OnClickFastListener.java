@@ -27,7 +27,7 @@ public abstract class OnClickFastListener implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-// 判断当前点击事件与前一次点击事件时间间隔是否小于阙值
+        // 判断当前点击事件与前一次点击事件时间间隔是否小于阙值
         if (isFastDoubleClick()) {
             return;
         }
@@ -46,7 +46,7 @@ public abstract class OnClickFastListener implements View.OnClickListener {
 
         return this;
     }
-*/
+    */
 
 
 
