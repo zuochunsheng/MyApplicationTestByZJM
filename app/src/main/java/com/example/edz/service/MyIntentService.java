@@ -10,6 +10,8 @@ import com.example.edz.util.LogUtil;
 /**
  *  IntentService，可以看做是Service和HandlerThread的结合体，
  * 在完成了使命之后会自动停止，适合需要在工作线程处理UI无关任务的场景。
+ *
+ * http://blog.csdn.net/iromkoear/article/details/63252665
  */
 public class MyIntentService extends IntentService {
     /**
@@ -39,6 +41,7 @@ public class MyIntentService extends IntentService {
         mLocalBroadcastManager = LocalBroadcastManager.getInstance(this);
     }
 
+    //启动 IntentService 不需要新建线程。
     @Override
     protected void onHandleIntent(Intent intent) {
         LogUtil.e("onHandleIntent");
