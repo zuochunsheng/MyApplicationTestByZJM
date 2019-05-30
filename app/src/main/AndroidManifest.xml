@@ -67,6 +67,7 @@
 
         <!-- 热跟新 end -->
 
+        <!--自定义控件-->
         <activity android:name=".MainActivity">
 
             <!--
@@ -88,13 +89,14 @@
             </intent-filter>
             -->
         </activity>
-        <!-- 电源关开 生命周期 -->
+        <!-- 电源关开 生命周期  密码框-->
         <activity android:name=".activity.PowerActivity" />
         <!-- 图表 ？？？ -->
         <activity android:name=".activity.ChartActivity" />
 
         <!-- 最新 热修复 -->
         <activity android:name=".activity.FixedActivity" />
+      <!--  下载 安装apk-->
         <activity android:name=".activity.DownLoadActivity">
 
             <!--
@@ -105,17 +107,12 @@
             </intent-filter>
             -->
         </activity>
+       <!-- 带进度下载-->
+        <activity android:name=".activity.ProgressActivity"/>
+        <!--分享动画-->
         <activity android:name=".activity.ShareActivity" />
-        <activity android:name=".activity.ProgressActivity">
 
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
-        </activity>
+        <!--网络监听 和跳转网络设置-->
         <activity android:name=".activity.NetErrorActivity">
 
             <!--
@@ -126,7 +123,6 @@
             </intent-filter>
             -->
         </activity>
-
         <receiver android:name=".broadcast.NetWorkReceiver">
             <intent-filter>
 
@@ -135,13 +131,16 @@
             </intent-filter>
         </receiver>
 
+       <!-- 权限的封装-->
         <activity android:name=".activity.PermissionActivity" />
+       <!-- 运行时权限-->
         <activity android:name=".base.BaseActivity" />
 
         <!-- 权限 背景 -->
         <activity
             android:name=".permission.ShadowActivity"
             android:theme="@android:style/Theme.Translucent" />
+       <!-- 没用-->
         <activity
             android:name=".activity.SettingsActivity"
             android:label="@string/title_activity_settings">
@@ -154,9 +153,11 @@
             </intent-filter>
             -->
         </activity>
+
+      <!--  RefreshLayout-->
         <activity android:name=".activity.RefreshActivity" />
 
-        <!-- 点击事件 -->
+        <!-- 连续点击事件  反射 ioc获取控件-->
         <activity
             android:name=".kotlin.KotlinActivity"
             android:label="@string/app_name"
@@ -170,6 +171,8 @@
             </intent-filter>
             -->
         </activity>
+
+       <!-- SharedPreferencesUtil  集合 对象 -->
         <activity android:name=".activity.SpActivity">
 
             <!--
@@ -192,6 +195,8 @@
             </intent-filter>
             -->
         </activity>
+
+       <!-- pdf-->
         <activity android:name=".activity.ProtocolActivity">
 
             <!--
@@ -202,6 +207,8 @@
             </intent-filter>
             -->
         </activity>
+
+      <!--  bindService  binder-->
         <activity android:name=".activity.BindActivity"></activity>
 
         <service
@@ -223,6 +230,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>-->
         </activity>
+
+       <!-- TextView-->
         <activity android:name=".activity.baseactivity.TextViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

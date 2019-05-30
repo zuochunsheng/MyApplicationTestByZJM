@@ -50,12 +50,10 @@ public class MyBindService extends Service {
     }
 
     public void excute() {
-        System.out.println("通过Binder得到Service的引用来调用Service内部的方法");
         LogUtil.e("通过Binder得到Service的引用来调用Service内部的方法");
     }
 
     public void excuteABC() {
-
         LogUtil.e("通过Binder得到Service的引用来调用Service内部的方法ABC");
     }
 
